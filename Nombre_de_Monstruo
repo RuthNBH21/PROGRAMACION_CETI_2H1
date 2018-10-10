@@ -4,17 +4,17 @@ int main () {
   int i_nc, i_nm, i_nd;
   
   printf("Ingresa el ultimo digito del día en que naciste: ");
-  scanf("%i",&i_nc );
+  scanf("%i",&i_nd );
 
   printf("Ingresa tu numero de mes en que naciste: ");
   scanf("%i",&i_nm );
 
   printf("Ingresa el ultimo digito de tu numero celular: ");
-  scanf("%i",&i_nd );
+  scanf("%i",&i_nc );
 
   if (i_nd >= 0 && i_nd <= 9 && i_nm >= 1 && i_nm <= 12 && i_nc >= 0 && i_nc <= 9) {
 
-    switch (i_nc) {
+    switch (i_nd) {
     case 0: printf ("Cíclope "); break;
     case 1: printf ("Duende "); break;
     case 2: printf ("Hada "); break;
@@ -42,7 +42,7 @@ int main () {
       case 11: printf ("lame ");break;
       case 12: printf ("traga ");break;
   }
-  switch (i_nd) {
+  switch (i_nc) {
       case 0: printf ("dedos");break;
       case 1: printf ("brazos");break;
       case 2: printf ("narices");break;
