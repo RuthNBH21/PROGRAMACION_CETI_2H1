@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main () {
+  int i_nc, i_nm, i_nd;
+  
+  printf("Ingresa el ultimo digito del día en que naciste: ");
+  scanf("%i",&i_nc );
+
+  printf("Ingresa tu numero de mes en que naciste: ");
+  scanf("%i",&i_nm );
+
+  printf("Ingresa el ultimo digito de tu numero celular: ");
+  scanf("%i",&i_nd );
+
+  if (i_nd >= 0 && i_nd <= 9 && i_nm >= 1 && i_nm <= 12 && i_nc >= 0 && i_nc <= 9) {
+
+    switch (i_nc) {
+    case 0: printf ("Cíclope "); break;
+    case 1: printf ("Duende "); break;
+    case 2: printf ("Hada "); break;
+    case 3: printf ("Bruja/o ");break;
+    case 4: printf ("Zombie ");break;
+    case 5: printf ("Lobo ");break;
+    case 6: printf ("Patata ");break;
+    case 7: printf ("Fantasma ");break;
+    case 8: printf ("Momia ");break;
+    case 9: printf ("Vampiro ");break;
+    }
+    
+  
+  switch (i_nm) {
+      case 1: printf ("besa ");break;
+      case 2: printf ("desgarra ");break;
+      case 3: printf ("abraza ");break;
+      case 4: printf ("tritura ");break;
+      case 5: printf ("come ");break;
+      case 6: printf ("arranca ");break;
+      case 7: printf ("quema ");break;
+      case 8: printf ("quita ");break;
+      case 9: printf ("truena ");break;
+      case 10: printf ("muerde ");break;
+      case 11: printf ("lame ");break;
+      case 12: printf ("traga ");break;
+  }
+  switch (i_nd) {
+      case 0: printf ("dedos");break;
+      case 1: printf ("brazos");break;
+      case 2: printf ("narices");break;
+      case 3: printf ("piernas");break;
+      case 4: printf ("huesos");break;
+      case 5: printf ("orejas");break;
+      case 6: printf ("labios");break;
+      case 7: printf ("uñas");break;
+      case 8: printf ("cráneos");break;
+      case 9: printf ("cuellos");break;
+  }
+  } else {
+  printf ("Algun dato esta fuera de rango");
+}
+return 0;
+}
