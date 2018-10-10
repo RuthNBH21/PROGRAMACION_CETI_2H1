@@ -1,0 +1,6 @@
+# Validacion-de-fechas
+// Se requiere un problema que valide una fecha en un rango de 1920 hasta el año actual (2018) tomando en cuanta los días que tienen cada mes y si es año bisciesto o no //
+// Meses de 31 días: enero, marzo, mayo, julio, agosto, octubre y diciembre //
+// Meses de 30 días: abril, junio, septiembre y noviembre //
+// Meses de 29 días: febrero, año bisciesto (cada 4 años) //
+// Meses de 28 días: febrero, año NO bisciesto //
