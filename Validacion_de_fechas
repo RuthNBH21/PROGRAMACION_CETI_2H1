@@ -4,3 +4,7 @@
 // Meses de 30 días: abril, junio, septiembre y noviembre //
 // Meses de 29 días: febrero, año bisciesto (cada 4 años) //
 // Meses de 28 días: febrero, año NO bisciesto //
+
+case 1,3,5,7,8,10,12 = 31 días
+case 4,6,9,11 = 30 dias
+case 2 = anio % 400 = 28-29 días
