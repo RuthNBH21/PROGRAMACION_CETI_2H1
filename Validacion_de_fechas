@@ -21,8 +21,8 @@ int main () {
   scanf("%i",&i_anio );
 
     if (i_mes >= 1 && i_mes <= 12 ) {
-    switch (i_mes)
-    {
+     switch (i_mes)
+     {
       case 1: 
       case 3:
       case 5:
@@ -64,8 +64,6 @@ int main () {
      }
       }
      } else {
-    printf ("FECHA NO VÁLIDA");
+     printf ("FECHA NO VÁLIDA");
       }
-    } else {
-    printf ("FECHA FUERA DEL RANGO");
-}
+     }
