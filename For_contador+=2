@@ -1,0 +1,12 @@
+// Ciclo controlado por un contador, mostrando la cuenta de numeros pares de 0 a 20 //
+
+
+#include <stdio.h>
+
+int main () {
+  int i_cont;
+
+  for (i_cont=0; i_cont<=20; i_cont+=2) {
+    printf ("%i ", i_cont );
+  }
+}
