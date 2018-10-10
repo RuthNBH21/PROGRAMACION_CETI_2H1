@@ -1,0 +1,21 @@
+// Terreno-Rectangular //
+
+#include <stdio.h>
+#define F_PG .30
+
+int main (void) {
+    float f_btr, f_htr, f_atr, f_pm2, f_ptr, f_gt, f_gi;
+    printf("Introduzca las medidas del terreno en metros: Ancho ");
+    scanf("%f", &f_htr);
+    printf("Largo: ");
+    scanf("%f", &f_btr);
+    printf("Ingrese el precio por metro cuadrado en pesos mexicanos ");
+    scanf("%f", &f_pm2);
+    f_atr = f_btr * f_htr;
+    f_ptr = f_pm2 * f_atr;
+    f_gt = f_ptr * F_PG;
+    f_gi = f_gt / 2;
+    printf("El precio total del terreno es %f pesos", f_ptr);
+    printf("La ganancia para el vendedor es de %f pesos", f_gi);
+    printf("La ganancia para la agencia es de %f pesos", f_gi);
+}
