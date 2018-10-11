@@ -15,11 +15,12 @@
 int main () {
   int i_dia, i_mes, i_anio;
 
-  printf ("Introduce una fecha en formato dd/mm/aa: ");
+  printf ("Introduce una fecha en formato dd/mm/aa (rango de 1920-2018): ");
   scanf("%i",&i_dia );
   scanf("%i",&i_mes );
   scanf("%i",&i_anio );
-
+  if (i_anio >= 1920 && i_anio <= 2018){
+  
     if (i_mes >= 1 && i_mes <= 12 ) {
      switch (i_mes)
      {
@@ -66,4 +67,7 @@ int main () {
      } else {
      printf ("FECHA NO VÁLIDA");
       }
-     }
+   } else {
+     printf ("FECHA INVÁLIDA, REVISE FORMATO");
+   }   
+ }
