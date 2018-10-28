@@ -1,0 +1,238 @@
+#include <stdio.h>
+
+int main (void){
+  int resp, empiD, terD, terU, increD, increU, i_dec, i_uni, empiU, eleccion,mesmm, mespp, mesp, diam, anom, mesm, diap, anop, x, dif, a, multa, desc, total, resp2;
+  char cont;
+ do{
+   printf ("Elige una opcion:\n 1) Mostrar una serie\n 2) Saber cuanto vas a pagar en una multa con el descuento\n 3) Salir\n");
+   scanf("%i", &resp);
+    if(resp>=1 && resp<=3){
+      while (resp<=3){  
+       switch (resp){
+         case 1:{
+         printf("1) Incrementar o 2) Decrementar");
+         scanf("%i", &eleccion);
+         switch (eleccion){
+           case 1: {
+           printf ("En que numero quieres que empieze la serie en la decena");
+           scanf ("%i", &empiD);
+           printf("En que numero quieres que empieze la serie en la unidad");
+           scanf("%i", &empiU);
+           printf ("En que numero quieres que termine la serie en la decena");
+           scanf ("%i", &terD);
+           printf ("En que numero quieres que termine la serie en la unidad");
+           scanf ("%i", &terU);
+           printf ("cuanto quieres que incremente la decena");
+           scanf ("%i", &increD);
+           printf ("cuanto quieres que incremente la unidad");
+           scanf ("%i", &increU);
+           i_uni=empiU;
+           for(i_dec=empiD; i_dec<terD; i_dec=i_dec+increD){
+             if(i_uni>9){
+              i_uni=i_uni%10;
+              i_dec++;
+              } 
+             if(i_dec<terD){
+               printf("%i %i \t", i_dec, i_uni);
+               }
+               i_uni=i_uni+increU;
+             } 
+           }
+           break;
+           case 2: {
+             printf ("En que numero quieres que empieze la serie en la decena");
+             scanf ("%i", &empiD);
+             printf("En que numero quieres que empieze la serie en la unidad");
+             scanf("%i", &empiU);
+             printf ("En que numero quieres que termine la serie en la decena");
+             scanf ("%i", &terD);
+             printf ("En que numero quieres que termine la serie en la unidad");
+             scanf ("%i", &terU);
+             printf ("cuanto quieres que decremente la decena");
+             scanf ("%i", &increD);
+             printf ("cuanto quieres que decremente la unidad");
+             scanf ("%i", &increU);
+             i_uni=empiU;
+             for(i_dec=empiD; i_dec>=terD; i_dec=i_dec-increD){
+               if(i_uni<0){
+               i_uni=i_uni+10;
+               i_dec--;
+               } 
+               if(i_dec==terD){
+                 if(i_uni>terU){
+                   printf("%i %i \t", i_dec, i_uni);
+                 }
+                 }
+                else if (i_dec>terD){
+                  printf("%i %i \t", i_dec, i_uni);
+                }
+               i_uni=i_uni-increU;
+               }
+             } break;
+           default: {printf("Acción no valida");}
+           break;
+           }
+         break;    
+        case 2:
+         printf("Fecha de emisión de la multa\n");
+         printf("Dia:");
+         scanf("%i", &diam);
+         printf("Mes:");
+         scanf("%i",&mesm);
+         printf("Año:");
+         scanf("%i",&anom);
+         printf ("Fecha de pago de la multa:\n");
+         printf("Dia:");
+         scanf("%i",&diap);
+         printf("Mes:");
+         scanf("%i",&mesp);
+         printf("Año:");
+         scanf("%i",&anop);
+         printf("Precio de la multa:");
+         scanf("%i", &multa);
+
+         switch (mesm){
+           case 1: mesmm=31;
+             break;
+           case 2: mesmm=59;
+             break;
+           case 3: mesmm=90;
+             break;
+           case 4: mesmm=120;
+             break;
+           case 5: mesmm=151;
+             break;
+           case 6: mesmm=181;
+             break;
+           case 7: mesmm=212;
+             break;
+           case 8: mesmm=243;
+             break;
+           case 9: mesmm=273;
+             break;
+           case 10: mesmm=304;
+             break;
+           case 11: mesmm=334;
+             break;
+           case 12: mesmm=365;
+             break;
+           }
+            printf("%i\n", mesmm);
+         switch (mesm){
+           case 1: diam=31-diam;
+             break;
+           case 2: diam=29-diam;
+             break;
+           case 3: diam=31-diam;
+             break;
+           case 4: diam=30-diam;
+             break;
+           case 5: diam=31-diam;
+             break;
+           case 6: diam=30-diam;
+             break;
+           case 7: diam=31-diam;
+             break;
+           case 8: diam=31-diam;
+             break;
+           case 9: diam=30-diam;
+             break;
+           case 10: diam=31-diam;
+             break;
+           case 11: diam=30-diam;
+             break;
+           case 12: diam=31-diam;
+             break;
+           }
+           diam=mesmm-diam;
+         switch (mesp){
+           case 1: mespp=31;
+             break;
+           case 2: mespp=59;
+             break;
+           case 3: mespp=90;
+             break;
+           case 4: mespp=120;
+             break;
+           case 5: mespp=151;
+             break;
+           case 6: mespp=181;
+             break;
+           case 7: mespp=212;
+             break;
+           case 8: mespp=243;
+             break;
+           case 9: mespp=273;
+             break;
+           case 10: mespp=304;
+             break;
+           case 11: mespp=334;
+             break;
+           case 12: mespp=365;
+             break;
+           }
+         switch (mesp){
+           case 1: diap=31-diap;
+             break;
+           case 2: diap=28-diap;
+             break;
+           case 3: diap=31-diap;
+             break;
+           case 4: diap=30-diap;
+             break;
+           case 5: diap=31-diap;
+             break;
+           case 6: diap=30-diap;
+             break;
+           case 7: diap=31-diap;
+             break;
+           case 8: diap=31-diap;
+             break;
+           case 9: diap=30-diap;
+             break;
+           case 10: diap=31-diap;
+             break;
+           case 11: diap=30-diap;
+             break;
+           case 12: diap=31-diap;
+             break;
+           }
+           diap=mespp-diap;
+         if(anom==anop){
+           x=diap-diam;
+           }else{
+             dif=anop-anom;
+           for(a=1; a==dif; a++){
+             x+=365;
+             }
+             x=x+diap-diam;
+             }
+             printf("\n Usted está pagando %i dias despues de la emisión de multa\n", x);
+           if(x>=0 && x<=15)
+             desc=multa*50;
+           if(x>=16 && x<=30)
+             desc=multa*25;
+           if(x>=31 && x<=45)
+             desc=multa*10;
+           if(x>=45 && x<=365)
+             desc=multa*5;
+           if(x>=365)
+             desc=0;
+           printf("%i\n", desc);
+           desc=desc/100;
+           printf("El descuendo es de %i\n", desc);
+           total=multa-desc;
+           printf("El total a pagar con todo y descuento es %i", total);
+           }
+           break;
+        case 3: 
+          printf ("Adiós");
+       }
+         break;
+    }
+     }
+    printf("\n¿Deseas continuar? Si: 1 / No: 2 \n");
+    scanf("%i",&resp2); 
+  }while (resp2==1);
+ return 0;
+}
