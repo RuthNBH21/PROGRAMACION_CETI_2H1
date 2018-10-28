@@ -6,8 +6,8 @@ int main (void){
  do{
    printf ("Elige una opcion:\n 1) Mostrar una serie\n 2) Saber cuanto vas a pagar en una multa con el descuento\n 3) Salir\n");
    scanf("%i", &resp);
-    if(resp>=1 && resp<=3){
-      while (resp<=3){  
+    if(resp>=1 && resp<=2){
+      while (resp<=2){  
        switch (resp){
          case 1:{
          printf("1) Incrementar o 2) Decrementar");
@@ -32,7 +32,7 @@ int main (void){
               i_uni=i_uni%10;
               i_dec++;
               } 
-             if(i_dec<terD){
+             if(i_dec<terD+increU){
                printf("%i %i \t", i_dec, i_uni);
                }
                i_uni=i_uni+increU;
@@ -59,11 +59,11 @@ int main (void){
                i_dec--;
                } 
                if(i_dec==terD){
-                 if(i_uni>terU){
+                 if(i_uni>terU-increU){
                    printf("%i %i \t", i_dec, i_uni);
                  }
                  }
-                else if (i_dec>terD){
+                else if (i_dec>terD-increU){
                   printf("%i %i \t", i_dec, i_uni);
                 }
                i_uni=i_uni-increU;
@@ -117,7 +117,6 @@ int main (void){
            case 12: mesmm=365;
              break;
            }
-            printf("%i\n", mesmm);
          switch (mesm){
            case 1: diam=31-diam;
              break;
@@ -202,9 +201,7 @@ int main (void){
            x=diap-diam;
            }else{
              dif=anop-anom;
-           for(a=1; a==dif; a++){
-             x+=365;
-             }
+             x=dif*365-x;
              x=x+diap-diam;
              }
              printf("\n Usted está pagando %i dias despues de la emisión de multa\n", x);
@@ -231,8 +228,8 @@ int main (void){
          break;
     }
      }
-    printf("\n¿Deseas continuar? Si: 1 / No: 2 \n");
+    printf("\n Queremos que sigas disfrutando de este programa que nos tomo muchas horas hacer, entonces ¿Deseas volver al menu? Si: 1 / No: 2 \n");
     scanf("%i",&resp2); 
-  }while (resp2==1);
+  }while (resp2=1 && resp==2);
  return 0;
 }
