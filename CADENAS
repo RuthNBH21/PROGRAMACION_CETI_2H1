@@ -1,0 +1,25 @@
+#include <string.h>
+#include <stdio.h> 
+
+// int main(void){
+ // char c_nom1[ ]={"RUTH\n"};
+  // printf("%s", c_nom1);
+  
+ // char c_nom2[10]={"RUTH\n"};
+  // printf("%s", c_nom2);
+
+ // char c_nom3[10]={'R','U','T','H'};
+  // printf("%s", c_nom3);
+// }
+
+int main(void){
+ char c_sec[99];
+ char c_opc;
+
+  printf("Escribe tu cadena de caracteres:\n");
+  scanf("%c",c_sec);
+
+  printf("Elige la opción que desees:\n A) Longitud de tu cadena\n B) Convertir todas las letras a mayúsculas\n C) Convertir todas las letras a minúsculas\n D) Copiar una cadena con otra\n E) Concatenar\n F) Salir");
+  scanf("%c",c_opc);
+
+}
