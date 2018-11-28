@@ -12,14 +12,38 @@
   // printf("%s", c_nom3);
 // }
 
+#include <string.h>
+#include <stdio.h>
+
 int main(void){
- char c_sec[99];
- char c_opc;
+ char cadena1[99];
+ char c_opc,opc2;
+ int i_longitud, i_mys, i_mns, i_cop, i_conc;
 
-  printf("Escribe tu cadena de caracteres:\n");
-  scanf("%c",c_sec);
+  printf("Escribe tu nombre completo:\n");
+  scanf("%s",&cadena1);
+ i_longitud = strlen(cadena1);
+ //i_mys = strupr(cadena1);
+ //i_mns = strlwr(cadena1);
+ //i_cop = strcpy(cadena1);
+ //i_conc = strcat(cadena1);
 
-  printf("Elige la opción que desees:\n A) Longitud de tu cadena\n B) Convertir todas las letras a mayúsculas\n C) Convertir todas las letras a minúsculas\n D) Copiar una cadena con otra\n E) Concatenar\n F) Salir");
-  scanf("%c",c_opc);
+  printf("Elige la opción que desees:\n 1) Longitud de tu cadena\n 2) Convertir todas las letras a mayúsculas\n 3) Convertir todas las letras a minúsculas\n 4) Copiar una cadena con otra\n 5) Concatenar\n 6) Salir:\t");
+  scanf("%i",&c_opc);
+
+  do{
+    switch(c_opc){
+    case 1: printf("\nla longitud de la cadena %s es: %i",cadena1,i_longitud);
+    break;
+    case 2: printf("\n%s",i_mys);
+    break;
+    case 3: printf("\n%s",i_mns);
+    break;
+    case 4: printf("\n%s",i_cop);
+    break;
+    case 5: printf("\n%s",i_conc);
+    break;
+    }
+   } while (c_opc=!6);
 
 }
