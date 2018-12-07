@@ -1,0 +1,311 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  int variables[20];
+  int arreglo[4][4];
+  int arreglo2[4][4];
+  int contra,des,resp,i,ii,j,p,nva,indice,orden,aux,x,y,a,b,mat;
+
+  do{
+  printf("¿Qué opción deseas? \n 1.-Ordenar algunos valores \n 2.-Aritmetica de matrices\n 3.-Salir\n");
+  scanf("%i",&des);
+
+
+ switch(des){
+  case 1:
+  printf("Ingresa la cantidad de variables, recuerda que no pueden ser mas de 20\n");
+  scanf("%i", &nva);
+  if(nva<21){
+    printf("Ingresa tus valores, todos deben ser numeros enteros\n");
+    for(indice= 0; indice<nva; indice++){
+      printf("Numero %i:\t", indice + 1);
+     scanf("%i", &variables[indice]);
+    }
+
+  
+     printf("¿En qué orden deseas que se acomoden?  \n  1.-Ascendente \n  2.-Descendente\n");
+     scanf("%i", &orden);
+     switch(orden){
+       case 1:
+       printf("La secuencia es:\t");
+       for(i=nva-1;i>0;i--){
+       for(j=0;j<i;j++){
+        if(variables[j]>variables[i]){
+        aux = variables[i];
+        variables[i] = variables[j];
+        variables[j] = aux;
+         }
+        }
+       }
+        for(p=0;p <= nva-1;p++){
+         printf("%d\t", variables[p]);
+         }
+    break;
+    case 2:
+    for(i=nva-1;i>0;i--){
+      for(j=0;j<i;j++){
+        if(variables[j]<variables[i]){
+        aux = variables[i];
+        variables[i] = variables[j];
+        variables[j] = aux;
+        }
+      }
+    }
+     printf("La secunecia es:\t");
+    for(p=0;p <= nva-1;p++){
+      printf("%d\t", variables[p]);
+
+    }
+
+    break;
+    default:
+    printf("Orden inválido");
+    break;
+    }
+  }else{
+    printf("Tu cantidad de datos excede los valores permitidos");
+  }
+  break;
+
+  case 2:
+  printf("Ingresa la longitud de las matrices[alto][largo], recuerda que ambas tienen la misma longitud\n");
+  scanf("%i%i",&y,&x);
+  if(x<5 && y<5){
+  x==a;
+  y==b;
+  i=0;
+  ii=0;
+  
+  printf("Ingresa las cantiades de la primera matriz\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    scanf("\n%i",&arreglo[i][ii]);
+    for(ii=0;ii<y-1;ii++){
+    scanf("  %i",&arreglo[i][ii+1]);    
+  }
+  }
+  
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]);     
+  }
+  }
+  
+  printf("\nIngresa las cantiades de la segunda matriz\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    scanf("\n%i",&arreglo2[i][ii]);
+    for(ii=0;ii<y-1;ii++){
+    scanf("  %i",&arreglo2[i][ii+1]);    
+  }
+  }
+  
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo2[i][ii+1]);     
+  }
+  }
+  printf("\nAhora, deseas que las matrices se sumen o resten?\n1.-Suma\n2.-Resta\n");
+  scanf("%i", &mat);
+  switch(mat){
+  case 1:
+  printf("\nLa matriz total es:\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]+arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]+arreglo2[i][ii+1]);     
+  }
+  }
+  break;
+  case 2:
+  printf("\nLa matriz total es:\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]-arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]-arreglo2[i][ii+1]);     
+  }
+  }
+  break;
+  }
+  }
+  
+  break;
+  case 3:
+  printf("Bye");
+  return 0;
+  break;
+ }
+   printf("\n\n¿Deseas continuar?\n1.-Si\n2.-No\n");
+   scanf("%i",&resp);
+  } while(resp==1);
+}
+
+//código sin contraseña
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+  int variables[20];
+  int arreglo[4][4];
+  int arreglo2[4][4];
+  int contra,des,resp,i,ii,j,p,nva,indice,orden,aux,x,y,a,b,mat;
+  do{
+     printf("Para ingresar a este código, es necesario escribir la contraseña.\n Acertijo: Ordena esta serie numérica sin espacios:\n13 21 8 1 2 5 1 3\n");
+    scanf("%i ",&contra);
+    
+   if(contra==1123581321){
+     printf("Contraseña correcta. Bienvenid@\n");
+     printf("¿Qué opción deseas? \n 1.-Ordenar algunos valores \n 2.-Aritmetica de matrices\n 3.-Salir\n");
+     scanf("%i",&des);
+   switch(des){
+     case 1:
+     printf("Ingresa la cantidad de variables, recuerda que no pueden ser mas de 20\n");
+     scanf("%i", &nva);
+     if(nva<21){
+       printf("Ingresa tus valores, todos deben ser numeros enteros\n");
+       for(indice= 0; indice<nva; indice++){
+         printf("Numero %i:\t", indice + 1);
+         scanf("%i", &variables[indice]);
+         }
+        for(indice=0; indice<nva; indice++){
+         printf("El numero %i es: %i\n", indice + 1, variables[indice]);
+         }
+     printf("¿En qué orden deseas que se acomoden?  \n  1.-Ascendente \n  2.-Descendente\n");
+     scanf("%i", &orden);
+     switch(orden){
+       case 1:
+       printf("La secuencia es:\t");
+       for(i=nva-1;i>0;i--){
+       for(j=0;j<i;j++){
+        if(variables[j]>variables[i]){
+        aux = variables[i];
+        variables[i] = variables[j];
+        variables[j] = aux;
+         }
+        }
+       }
+        for(p=0;p <= nva-1;p++){
+         printf("%d\t", variables[p]);
+         }
+    break;
+    case 2:
+    for(i=nva-1;i>0;i--){
+      for(j=0;j<i;j++){
+        if(variables[j]<variables[i]){
+        aux = variables[i];
+        variables[i] = variables[j];
+        variables[j] = aux;
+        }
+      }
+    }
+     printf("La secunecia es:\t");
+    for(p=0;p <= nva-1;p++){
+      printf("%d\t", variables[p]);
+
+    }
+
+    break;
+    default:
+    printf("Orden inválido");
+    break;
+    }
+  }else{
+    printf("Tu cantidad de datos excede los valores permitidos");
+  }
+  break;
+
+  case 2:
+  printf("Ingresa la longitud de las matrices[alto][largo], recuerda que ambas tienen la misma longitud\n");
+  scanf("%i%i",&y,&x);
+  if(x<5 && y<5){
+  x==a;
+  y==b;
+  i=0;
+  ii=0;
+  
+  printf("Ingresa las cantiades de la primera matriz\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    scanf("\n%i",&arreglo[i][ii]);
+    for(ii=0;ii<y-1;ii++){
+    scanf("  %i",&arreglo[i][ii+1]);    
+  }
+  }
+  
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]);     
+  }
+  }
+  
+  printf("\nIngresa las cantiades de la segunda matriz\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    scanf("\n%i",&arreglo2[i][ii]);
+    for(ii=0;ii<y-1;ii++){
+    scanf("  %i",&arreglo2[i][ii+1]);    
+  }
+  }
+  
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo2[i][ii+1]);     
+  }
+  }
+  printf("\nAhora, deseas que las matrices se sumen o resten?\n1.-Suma\n2.-Resta\n");
+  scanf("%i", &mat);
+  switch(mat){
+  case 1:
+  printf("\nLa matriz total es:\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]+arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]+arreglo2[i][ii+1]);     
+  }
+  }
+  break;
+  case 2:
+  printf("\nLa matriz total es:\n");
+  for(i=0; i<x;i++){
+    ii=0;
+    printf("\n%i",arreglo[i][ii]-arreglo2[i][ii]);   
+    for(ii=0;ii<y-1;ii++){
+    printf("  %i",arreglo[i][ii+1]-arreglo2[i][ii+1]);     
+  }
+  }
+  break;
+  }
+  }
+  
+  break;
+  case 3:
+  printf("Bye");
+  return 0;
+  break;
+ }
+   printf("\n\n¿Deseas continuar?\n1.-Si\n2.-No\n");
+   scanf("%i",&resp);
+  if(resp==1){
+    printf("Ingresa denuevo la contraseña:\n");
+        scanf("%i ",&contra);
+  }
+   }else {
+    printf("Contraseña errónea, sorry. Try again:\n");
+  }
+  }while(contra=1123581321);
+}
+
+// código con contraseña; Se brinca n scanf
