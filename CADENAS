@@ -21,31 +21,32 @@ int main(void){
   printf("Escribe tu nombre completo:\n");
   scanf("%s",&cadena1);
   i_longitud = strlen(cadena1);
- //i_mys = strupr(cadena1);
- //i_mns = strlwr(cadena1);
- //i_cop = strcpy(cadena1);
- //i_conc = strcat(cadena1);
+  i_mys = strupr(cadena1);
+  i_mns = strlwr(cadena1);
+  i_cop = strcpy(cadena1);
+  i_conc = strcat(cadena1);
 
   printf("Elige la opción que desees:\n 1) Longitud de tu cadena\n 2) Convertir todas las letras a mayúsculas\n 3) Convertir todas las letras a minúsculas\n 4) Copiar una cadena con otra\n 5) Concatenar\n 6) Salir:\t");
   scanf("%i",&c_opc);
 
     switch(c_opc){
-    case 1: printf("\nla longitud de la cadena %s es: %i",cadena1,i_longitud);
+    case 1: printf("\nla longitud de la cadena es: %i",cadena1,i_longitud);
     break;
-    case 2: printf("\n%s",i_mys);
+    case 2: printf("\nTu cadena convertida es: %s",i_mys);
     break;
-    case 3: printf("\n%s",i_mns);
+    case 3: printf("\nTu cadena convertida es: %s",i_mns);
     break;
     case 4: printf("\n%s",i_cop);
     break;
     case 5: printf("\n%s",i_conc);
     break;
-    default:
+    case 6:
     printf("Bonito nombre, bye");
+    return 0;
     break;
     }
-    printf("\n¿Deseas continuar?\t1.-Si\t2.-No:\t");
-   scanf("%i",&opc2);
+    printf("\n\n¿Deseas continuar?\t1.-SI\t2.-NO:\t");
+    scanf("%i",opc2);
    }while (opc2==1);
    printf("Bye");
 }
